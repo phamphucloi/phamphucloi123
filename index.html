@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        button{
+            font-size: 20px;
+        }
+
+        .oco{
+            /* background: white; */
+            border: 1px black solid;
+            width: 30px;
+            height: 30px;
+            float: left;
+            background: linear-gradient(to left, #ccffff, #fff);
+            text-align: center;
+            font-size: 30px;
+            color: red;
+        }
+
+        .banco{
+            width: 902px;
+            height: 500px;
+            /* border: 3px solid; */
+            /* background: black; */
+            margin: auto;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="content">
+        lorem ipsum dolor sit amet, consectet.
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Deleniti, cupiditate labore nobis enim voluptate harum, 
+        sed sunt cumque vero quasi iure error! Amet doloribus quia veniam maxime ratione ipsam eveniet.
+    </div>
+
+    <hr>
+
+
+
+    <div>
+        Nhấp vào --><button class="clickt">
+            A-
+        </button>
+    
+        <br>
+        <br>
+        Nhấp vào --><button class="click">
+            A
+        </button>
+    
+        <br>
+        <br>
+    
+    
+        Nhấp vào --><button class="clickc">
+            A+
+        </button>
+    </div>
+
+
+
+    <!-- <hr><br><br><br><br><br><br><br>
+    <br> -->
+
+    <table border="2" cellspacing="0" cellpadding="8">
+        <tr>
+            <td>
+                <span></span>
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                <img src="bongtai.jpg" alt="" class="img1">
+
+                <img src="gai.jpg" alt="" class="img2" height="225px">
+        
+                <img src="nhan.jpg" alt="" class="img3"> 
+            </td>
+        </tr>
+    </table>
+
+    <script type="text/javascript" src="jquery-3.6.0.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function(){
+        // console.log(localStorage);
+        var font_size = $("div").css("font-size");
+
+        var convert_fontSize_INT = parseInt(font_size, 16); 
+
+            // if(localStorage.getItem("convert_fontSize_INT")!=null){
+            //     var getitem =  localStorage.setItem("convert_fontSize_INT", 16);
+            //     var getitem =  localStorage.getItem(parseInt(convert_fontSize_INT));
+            //     var getitem =  convert_fontSize_INT;
+                
+            //     // localStorage.setItem("convert_fontSize_INT", 16);
+            //     // localStorage.getItem(parseInt(convert_fontSize_INT));
+            //     $(".content").css("font-size", convert_fontSize_INT + "px");    
+            // }
+
+        $(".clickc").click(function(){
+            if(convert_fontSize_INT < 26){
+                convert_fontSize_INT += 2;
+                $(".content").css("font-size", convert_fontSize_INT + "px");
+            }
+            
+            console.log(convert_fontSize_INT);
+        })
+
+        $(".clickt").click(function(){
+            if(convert_fontSize_INT > 8){
+                convert_fontSize_INT -= 2;
+                $(".content").css("font-size", convert_fontSize_INT + "px");
+            }
+            console.log(convert_fontSize_INT);
+        
+        })
+
+        $(".click").click(function(){
+            convert_fontSize_INT = 16;
+            convert_fontSize_INT = parseInt(convert_fontSize_INT);
+            $(".content").css("font-size", convert_fontSize_INT + "px");
+            console.log(convert_fontSize_INT);
+
+        })
+});
+            // $(".click").click(function(){
+            //     // var get_prop = $("div").css("font-size");
+            //     if(".click"==true){
+            //         var get_prop = $(".content").css("font-size", "16px")
+
+            //         get_prop;
+            //     }
+
+            //     else if(".clickt"){
+            //         var get_prop = $(".content").css("font-size", "16px")
+
+            //         console.log(get_prop);
+                    
+            //         // get_prop--;
+            //     }
+
+            //     else if(".clickc"==true){
+            //         var get_prop = $(".content").css("font-size", "16px")
+
+            //         get_prop++;
+            //     }
+
+            
+
+
+
+    </script>
+
+<script type="text/javascript">
+    $(document).ready(function(){
+        $(".img1").click(function(){
+            $("span").replaceWith(`<span><img style="justify-content:center; align-items:center; text-align:center; margin: auto; display: flex" src="bongtai.jpg" alt="" class="img1" width="300px" height="300px"></span>`)
+        })
+
+        $(".img2").click(function(){
+            $("span").replaceWith(`<span><img style="justify-content:center; align-items:center; text-align:center; margin: auto; display: flex" src="gai.jpg" alt="" class="img1" width="300px" height="300px"></span>`)
+        })
+
+        $(".img3").click(function(){
+            $("span").replaceWith(`<span><img style="justify-content:center; align-items:center; text-align:center; margin: auto; display: flex" src="nhan.jpg" alt="" class="img1" width="300px" height="300px"></span>`)
+        })
+
+    })
+</script>
+
+<!-- <div class="caro">
+    <div class="tao"></div>
+    <div class="tao"></div>
+    <div class="tao"></div>
+    <div class="tao"></div>
+    <div class="tao"></div>
+    <div class="tao"></div>
+    <div class="tao"></div>
+    <div class="tao"></div>
+    <div class="tao"></div>
+    <div class="tao"></div>
+    <div class="tao"></div>
+    <div class="tao"></div>
+    <div class="tao"></div>
+    <div class="tao"></div>
+    <div class="tao"></div>
+    <div class="tao"></div>
+    <div class="tao"></div>
+    <div class="tao"></div>
+    <div class="tao"></div>
+    <div class="tao"></div>
+    <div class="tao"></div>
+    <div class="tao"></div>
+    <div class="tao"></div>
+    <div class="tao"></div>
+    <div class="tao"></div>
+    <div class="tao"></div>
+    <div class="tao"></div>
+    <div class="tao"></div>
+    <div class="tao"></div>
+    <div class="tao"></div>
+    <div class="tao"></div>
+    <div class="tao"></div>
+    <div class="tao"></div>
+    <div class="tao"></div>
+    <div class="tao"></div>
+    <div class="tao"></div>
+</div>
+
+
+<script type="text/javascript">
+    $(document).ready(function(){
+        for(var i=0;i<=2990;i++){
+            $(".caro").append(`<div class="tao"></div>`);
+        }
+
+        $(".caro").css("width", "1500px");
+        $(".caro").css("margin", "auto");
+
+
+        $(".tao").css("width", "20px");
+        $(".tao").css("height", "20px");
+        $(".tao").css("background", "white");
+        $(".tao").css("border", "1px solid black");
+        $(".tao").css("float", "left");
+        // $(".tao").css("margin", "0");
+
+        $(".tao").mouseover(function(){
+            // $(this).css("text","0");
+            $(".tao").click(function(){
+            $(this).append(`<div class="tao">X</div>`);
+
+            })
+            //  so;
+        })
+
+        $(".tao").mouseover(function(){
+            // $(this).css("text","0");
+            $(".tao").click(function(){
+            $(this).append(`<div class="tao">O</div>`);
+
+            })
+            //  so;
+        })
+            // alert(0);
+
+
+
+
+    })
+</script> -->
+
+
+<!-- <div class="banco"></div>
+
+<script type="text/javascript">
+    var S = 8008;
+    var Cong = '';
+    var flag = 0;
+
+    for(var i = 1;i <= S; i++ ){
+        Cong += '<div class="oco"></div>';
+    };
+
+    var chieucaobanco = Math.ceil(S / 31) * 32;
+    $(".banco").css("height", chieucaobanco);
+
+    $(".banco").html(Cong);
+
+    $(".oco").click(function(){
+        var check = $(this).html();
+
+        if(check==''){
+            if(flag % 2 == 0){
+            $(this).html("X");
+            }
+            else{
+                $(this).html("O");
+            }
+            flag++;
+        }else{
+            alert("Mày định chơi ăn gian hả ((: ");
+        }
+    })
+
+</script> -->
+
+<br>
+
+<div class="ccr"></div>
+
+
+<script type="text/javascript">
+    $(document).ready(function(){
+    var dientich = prompt('Nhập số vào, không nhập thì mày coi chừng tao: 😡😡😡😡😡😡😡😡', 10);
+
+    var noi = '';
+
+    var co = 0;
+
+    if(dientich != null){
+        for(var j = 1; j <= dientich;j++){
+        noi += `<div class="ccro"></div>`;
+    }
+
+    $(".ccr").html(noi);
+
+    $(".ccro").css("width", "30px");
+    $(".ccro").css("height", "30px");
+    $(".ccro").css("background", "white");
+    $(".ccro").css("border", "1px solid black");
+    $(".ccro").css("float", "left");
+    $(".ccro").css("text-align", "center");
+    $(".ccro").css("font-size", "30px");
+    // $(".ccro").css("img", "src=`bongtai.jpg`");
+
+    $(".ccro").click(function(){
+
+        var check_empty = $(this).html();
+
+        if(check_empty === ''){
+            if(co % 2 == 0){
+                $(this).html("X");
+            }
+            else{
+                $(this).html("O").css("color","orangered");
+            }
+
+
+        co++;
+        }
+        else{
+            confirm("Á à...Tao biết ngay là mày định ăn gian mà, kí lủng đầu bây giờ 😡😡😡😡😡😡😡😡");
+        }
+    })
+    }
+    if(dientich == ''){
+        alert("Mày không nhập giá trị vào sao mà nó chạy ((:??");
+    }
+
+
+
+    })
+
+
+</script>
+
+<!-- <script>
+    var result = confirm("Mày có muốn xóa nó không?");
+
+    if(result == true){
+        alert("Đồng ý xóa.");
+    }
+    if(result == false){
+        alert("Không đồng ý xóa.")
+    }
+</script> -->
+    
+</body>
+</html>
+

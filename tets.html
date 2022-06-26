@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script src="jquery-3.6.0.min.js"></script>
+
+    <!-- <table border=1 cellspacing=0 cellpadding=8>
+        <tr>
+            <td>
+                <p></p>
+            </td>
+        </tr>
+
+        <tr>
+            <td><img src="nhan.jpg" alt="" class="img1"></td>
+            <td><img src="bongtai.jpg" alt="" class="img2"></td>
+            <td><img src="gai.jpg" alt="" class="img3"></td>
+        </tr>
+    </table>
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $(".img1").click(function(){
+                $("p").replaceWith(`<p><img src="nhan.jpg" alt="" class="img1"></p>`);
+            })
+
+            $(".img2").click(function(){
+                $("p").replaceWith(`<p><img src="bongtai.jpg" alt="" class="img2"></p>`);
+            })
+
+            $(".img3").click(function(){
+                $("p").replaceWith(`<p><img src="gai.jpg" alt="" class="img3"></p>`);
+            })
+        })
+    </script> -->
+
+    <div class="banco"></div>
+
+    <script type="text/javascript">
+        var S = prompt("Nhập số lượng ô mà m thích: ", 10);
+
+        var them = '';
+
+        var co = 0;
+
+        
+
+        for(var i = 1; i <= S; i++){
+            them += `<div class="oco"></div>`
+        }
+
+        $(".banco").html(them);
+        //css cho bàn cờ
+        // $(".banco").css("background", "red");
+        // $(".banco").css("width", "3000px");
+
+        
+        //css cho ô cờ
+        $(".oco").css("width", "30px");
+        $(".oco").css("height", "30px");
+        $(".oco").css("border", "1px solid black");
+        $(".oco").css("background", "red");
+        $(".oco").css("float", "left");
+
+        $(".oco").click(function() {
+
+            var checkEmpty = $(this).html();
+
+            if(checkEmpty==''){
+                if(co % 2 != 0){
+                    $(this).html("X").css("color", "white");
+                }
+                else{
+                    $(this).html("O").css("color", "black");
+                }
+
+                co++;
+            }else{
+                alert("Mày định ăn gian hả ((: ");
+            }
+        });
+
+
+
+    </script>
+</body>
+</html>
